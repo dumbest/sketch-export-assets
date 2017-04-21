@@ -90,7 +90,8 @@ com.geertwille = {
         askForPrefix = [settings valueForKey:@"ask-for-prefix"];
         openFolderExport = [settings valueForKey:@"open-folder-export"];
 
-        [settingsInput setMessageText:@'Change settings'];
+        [settingsInput setMessageText:@'Change Settings'];
+        [settingsInput addTextLabelWithValue:@"Based Scale"];
         [settingsInput addAccessoryView: helpers.createSelect(densityScales, densityScale)];
         [settingsInput addAccessoryView: helpers.createPrefixCheckbox({name:'Ask for prefix on export', value:'1'}, askForPrefix)];
         [settingsInput addAccessoryView: helpers.createOpenCheckbox({name:'Open folder on export', value:'1'}, openFolderExport)];
